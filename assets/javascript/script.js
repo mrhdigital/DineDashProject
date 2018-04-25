@@ -8,3 +8,7 @@
     messagingSenderId: "986829728187"
   };
   firebase.initializeApp(config);
+
+var searchInput;
+
+var queryURL = 'https://api.edamam.com/search?app_id=64622731&app_key=720fb1becfca77bf78494a9ce7272cc6&q=' + searchInput;
