@@ -16,4 +16,12 @@ Using APIs:
 
 2. src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzqkVYTkqerzgHt34cTe3AaIFvApgMGag&callback=initMap"
 
-3. src="
+3. var queryURL = 'https://api.edamam.com/search?app_id=64622731&app_key=720fb1becfca77bf78494a9ce7272cc6&q=' + searchInput;
+
+Tasks:
+
+Eric: Frontend working on html and css as well as materialize/css. Google maps API
+
+Mirza: Restaurant API
+
+Gavin: Recipe API/backend-firebase
