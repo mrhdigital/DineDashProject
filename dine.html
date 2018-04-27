@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dash or Dine</title>
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <!-- Linking Styling Sheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Navbar goes here -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo"><img src="assets/images/nutrition-logo.png"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="sass.html">Dine</a>
+                </li>
+                <li>
+                    <a href="badges.html">Dash</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Layout here -->
+    <div class="row row-information">
+        <div class="col s10">
+            <div class="card blue-grey darken-1">
+                <div class="card-image">
+                    <img id="sidebarImage" src="assets/images/sidebar-image.jpg">
+                    <span class="card-title">Get Recipes!</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>Start adding your information to get started!</p>
+                    <form>
+                        <div class="row row-ingredient">
+                            <div class="input-field col s6">
+                                <input placeholder="Ingredient" id="one-input" type="text" class="validate">
+                            </div>
+                        </div>
+                        <div class="row row-ingredient">
+                            <div class="input-field col s6">
+                                <input placeholder="Restriction" id="two-input" type="text" class="validate">
+                            </div>
+                        </div>
+                        <div class="row row-ingredient">
+                            <div class="input-field col s6">
+                                <input placeholder="Ingredient 3" id="three-input" type="text" class="validate">
+                            </div>
+                        </div>
+                        <div class="row row-ingredient">
+                            <div class="input-field col s6">
+                                <input placeholder="Ingredient 4" id="four-input" type="text" class="validate">
+                            </div>
+                        </div>
+                        <div class="row row-ingredient">
+                            <div class="input-field col s6">
+                                <input placeholder="Ingredient 5" id="five-input" type="text" class="validate">
+                            </div>
+                        </div>
+                        <div class="row row-ingredient">
+                            <div class="input-field col s6">
+                                <input placeholder="Ingredient 6" id="six-input" type="text" class="validate">
+                            </div>
+                        </div>
+                        <a class="waves-effect waves-light btn">button</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linking Javascript -->
+    <script src="assets/javascript/script.js"></script>
+    <!-- <script src="assets/javascript/materialize.min.js"></script> -->
+
+
+
+</body>
+
+</html>

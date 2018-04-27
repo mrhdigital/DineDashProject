@@ -1,6 +1,28 @@
-body {
-    min-height: 100%;
-    
+body{
+	background: url("../images/background.jpg");
+	background-size: 100%;
+    background-repeat: repeat;
+}
+
+.modal-content {
+    text-align: center !important;
+}
+
+.modal-footer {
+    text-align: center !important;
+}
+
+#dineBtn {
+    background-color: #cb202d;
+    color: #fff;
+    margin-bottom: 40px !important;
+
+}
+
+#dashBtn {
+    background-color:#cb202d;
+    color: #fff;
+    margin-bottom: 40px !important;
 }
 
 #sidebarImage {
@@ -12,21 +34,15 @@ body {
     float: left;
 }
 
-body{
-	background: url("../images/background.jpg");
-	background-size: 100%;
-    background-repeat: repeat;
-    
-    
-
-}
 a:link, a:visited {
     color: #cb202d;
     text-decoration: none;
 }
+
 a:hover {
     color: #D94148;
 }
+
 header {
     background: #cb202d;
     color: white;
@@ -35,6 +51,7 @@ header {
     padding: 5px 15px;
     text-align: center;
 }
+
 input, .input {
     border: none;
     border-radius: 5px;
@@ -43,6 +60,7 @@ input, .input {
     padding: 12px 10px;
     width: 160px;
 }
+
 .api-call, #resetButton {
     background-color: #cb202d;
     border: 2px solid white;
@@ -55,12 +73,15 @@ input, .input {
     padding: 10px 10px;
     width: 100px;
 }
+
 .api-call:hover, #resetButton:hover {
     background:#D94148;
 }
+
 .api-call:active, #resetButton:active {
     transform: translateY(4px);
 }
+
 .buttons {
     background-color: #cb202d;
     border: 2px solid white;
@@ -75,12 +96,15 @@ input, .input {
     padding: 4px;
     width: 280px;
 }
+
 .buttons:hover {
     background:#D94148;
 }
+
 .buttons:active {
     transform: translateY(4px);
 }
+
 .formWrapper {
     background-color: #cb202d;
     border-radius: 5px;
@@ -90,6 +114,7 @@ input, .input {
     height: auto;
    
 }
+
 .formWrapper span {
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
@@ -98,6 +123,7 @@ input, .input {
     padding-right: 20px;
     
 }
+
 .resultsWrapper {
     /* background-color: #cb202d;
     border-radius: 5px; */
@@ -106,23 +132,28 @@ input, .input {
     width: 100%;
     height: auto;
 }
+
 .venues {
     background-color: white;
     border-radius: 5px;
     margin-bottom: 20px;
     padding: 10px;
 }
+
 .venueName {
     color: #cb202d;
     font-size: 27px;
     font-weight: bold;
 }
+
 .venueCity {
     font-weight: bold;
 }
+
 .wrapper {
     margin: 25px 25px;
 }
+
 #cuisine-input {
     display: none;
 }
