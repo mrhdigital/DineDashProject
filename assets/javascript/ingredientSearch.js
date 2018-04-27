@@ -20,9 +20,16 @@ $('.btn-search').on('click', function(){
     queryURL += ('&q=' + ingredientInput.trim().replace(/ /g, "+"))
 
   }
+  if ($('#diet-input').val()) {
+    var ingredientInput = $('#diet-input').val();
+    queryURL += ('&diet=' + ingredientInput.trim().replace(/ /g, "+"))
 
+  }
+  if ($('health-input').val()) {
+    var ingredientInput = $('#health-input').val();
+    queryURL += ('&health=' + ingredientInput.trim().replace(/ /g, "+"))
 
-
+  }
 
 var searchInput = 'chicken';
 database.ref().set({
@@ -32,7 +39,6 @@ database.ref().on('value', function(snapshot){
   console.log(snapshot)
   searchTerm = snapshot.val().searchTerms;
 });
-
 
 $.ajax({
   url: queryURL,
@@ -50,11 +56,9 @@ $.ajax({
     var newRecipe = $('<li id="recipe-' + i + '">');
     newRecipe.append('<p>' + hits.label + '</p>').append('<p><a>' + hits.url + '</a></p>').append(labels).append('<img src=' + hits.image + '>');
 
-
     $('.recipes').append(newRecipe);
 
   }
-
 
 })
 })
