@@ -9,15 +9,16 @@
   };
   firebase.initializeApp(config);
 
-database = database.firebase();
+database = firebase.database();
 
 var searchInput;
 
-var queryURL = 'https://api.edamam.com/search?app_id=64622731&app_key=720fb1becfca77bf78494a9ce7272cc6&q=' + searchInput;
+var queryURL = 'https://api.edamam.com/search?app_id=64622731&app_key=720fb1becfca77bf78494a9ce7272cc6&q=bagel'// + searchInput;
 
 $.ajax({
     url: queryURL,
     method: 'GET'
 }).then(function(response){
+  console.log(response)
 
 })
