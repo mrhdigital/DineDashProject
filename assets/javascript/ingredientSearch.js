@@ -1,5 +1,4 @@
 // Initialize Firebase
-// Initialize Firebase
 var config = {
   apiKey: "AIzaSyC9y55fnvNPqajMd9zcWttEMcvM86rjnuE",
   authDomain: "nutrition-project-b321a.firebaseapp.com",
@@ -12,11 +11,19 @@ var config = {
  firebase.initializeApp(config);
 
 var database = firebase.database();
+var queryURL = 'https://api.edamam.com/search?app_id=64622731&app_key=720fb1becfca77bf78494a9ce7272cc6';
+
+$('.btn-search').on('click', function(){
+
+  if ($('#ingredient-input').val()) {
+    var ingredientInput = $('#ingredient-input').val();
+    queryURL += ('&q=' + ingredientInput.trim().replace(/ /g, "+"))
+
+  }
 
 
-function createSearchQuery() {
 
-}
+
 var searchInput = 'chicken';
 database.ref().set({
   searchTerms: searchInput
@@ -25,7 +32,7 @@ database.ref().on('value', function(snapshot){
   console.log(snapshot)
   searchTerm = snapshot.val().searchTerms;
 });
-var queryURL = 'https://api.edamam.com/search?app_id=64622731&app_key=720fb1becfca77bf78494a9ce7272cc6&q=' + searchTerm;
+
 
 $.ajax({
   url: queryURL,
@@ -49,4 +56,5 @@ $.ajax({
   }
 
 
+})
 })
