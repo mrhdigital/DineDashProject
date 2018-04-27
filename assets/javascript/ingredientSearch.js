@@ -18,19 +18,30 @@ function createSearchQuery() {
 
 }
 var searchInput = 'chicken';
-var queryURL = 'https://api.edamam.com/search?app_id=64622731&app_key=720fb1becfca77bf78494a9ce7272cc6&q=' + searchInput;
+database.ref().set({
+  searchTerms: searchInput
+})
+database.ref().on('value', function(snapshot){
+  console.log(snapshot)
+  searchTerm = snapshot.val().searchTerms;
+});
+var queryURL = 'https://api.edamam.com/search?app_id=64622731&app_key=720fb1becfca77bf78494a9ce7272cc6&q=' + searchTerm;
 
 $.ajax({
   url: queryURL,
   method: 'GET'
 }).then(function (response) {
-  console.log(response)
 
   for (var i = 0; i < response.hits.length; i++) {
     var hits = response.hits[i].recipe
+    var labels = $('<ul>');
+
+    for (var j = 0; j < hits.healthLabels.length; j++) {
+      labels.append('<li>' + hits.healthLabels[j] + '</li>');
+    }
 
     var newRecipe = $('<li id="recipe-' + i + '">');
-    newRecipe.append('<p>' + hits.label + '</p>').append('<img src=' + hits.image + '>');
+    newRecipe.append('<p>' + hits.label + '</p>').append('<p><a>' + hits.url + '</a></p>').append(labels).append('<img src=' + hits.image + '>');
 
 
     $('.recipes').append(newRecipe);
