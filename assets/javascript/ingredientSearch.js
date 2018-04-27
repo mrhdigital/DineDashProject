@@ -19,8 +19,7 @@ function createSearchQuery() {
 }
 var searchInput = 'chicken';
 database.ref().set({
-  searchTerms: searchInput,
-  test: 'test'
+  searchTerms: searchInput
 })
 database.ref().on('value', function(snapshot){
   console.log(snapshot)
