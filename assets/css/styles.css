@@ -1,0 +1,13 @@
+body {
+    min-height: 100%;
+    
+}
+
+#sidebarImage {
+    max-height: 200px;
+    width: auto;
+}
+
+.row-information {
+    float: left;
+}
