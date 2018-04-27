@@ -41,7 +41,7 @@ $('.btn-search').on('click', function () {
       //set reference for recipe
       var hits = response.hits[i].recipe
 
-      //creating UL to attach recipes to
+      //creating UL to attach ingredients to
       var labels = $('<ul>');
 
       // looping through ingredients on each recipe
