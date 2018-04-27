@@ -9,7 +9,8 @@ var config = {
   messagingSenderId: "986829728187"
 };
 
-firebase.initializeApp(config);
+
+database = firebase.database();
 
 var database = firebase.database();
 
@@ -36,5 +37,6 @@ $.ajax({
     $('.recipes').append(newRecipe);
 
   }
+
 
 })
