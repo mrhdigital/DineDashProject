@@ -8,57 +8,53 @@ var config = {
   messagingSenderId: "986829728187"
 };
 
- firebase.initializeApp(config);
+firebase.initializeApp(config);
 
+//creating reference for firebase and base Query URL
 var database = firebase.database();
 var queryURL = 'https://api.edamam.com/search?app_id=64622731&app_key=720fb1becfca77bf78494a9ce7272cc6';
 
-$('.btn-search').on('click', function(){
+//setting click event to search button
+$('.btn-search').on('click', function () {
 
+  //checking if input field has input
   if ($('#ingredient-input').val()) {
+
+    //getting info from input field and adding to database
     var ingredientInput = $('#ingredient-input').val();
-    queryURL += ('&q=' + ingredientInput.trim().replace(/ /g, "+"))
-
-  }
-  if ($('#diet-input').val()) {
-    var ingredientInput = $('#diet-input').val();
-    queryURL += ('&diet=' + ingredientInput.trim().replace(/ /g, "+"))
-
-  }
-  if ($('health-input').val()) {
-    var ingredientInput = $('#health-input').val();
-    queryURL += ('&health=' + ingredientInput.trim().replace(/ /g, "+"))
+    database.ref().set({ingredientTerms: ingredientInput})
 
   }
 
-var searchInput = 'chicken';
-database.ref().set({
-  searchTerms: searchInput
-})
-database.ref().on('value', function(snapshot){
-  console.log(snapshot)
-  searchTerm = snapshot.val().searchTerms;
-});
+  //getting input from database and adding to query URL
+  database.ref().on('value', function (snapshot) {
+    queryURL += ('&q=' + snapshot.val().ingredientTerms);
+  });
 
-$.ajax({
-  url: queryURL,
-  method: 'GET'
-}).then(function (response) {
+  $.ajax({
+    url: queryURL,
+    method: 'GET'
+  }).then(function (response) {
 
-  for (var i = 0; i < response.hits.length; i++) {
-    var hits = response.hits[i].recipe
-    var labels = $('<ul>');
+    //looping through recipes
+    for (var i = 0; i < response.hits.length; i++) {
+      //set reference for recipe
+      var hits = response.hits[i].recipe
 
-    for (var j = 0; j < hits.healthLabels.length; j++) {
-      labels.append('<li>' + hits.healthLabels[j] + '</li>');
+      //creating UL to attach recipes to
+      var labels = $('<ul>');
+
+      // looping through ingredients on each recipe
+      for (var j = 0; j < hits.healthLabels.length; j++) {
+        labels.append('<li>' + hits.healthLabels[j] + '</li>');
+      }
+
+      //appending all list items onto the list
+      var newRecipe = $('<li id="recipe-' + i + '">');
+      newRecipe.append('<p>' + hits.label + '</p>').append('<p><a>' + hits.url + '</a></p>').append(labels).append('<img src=' + hits.image + '>');
+      $('.recipes').append(newRecipe);
+
     }
 
-    var newRecipe = $('<li id="recipe-' + i + '">');
-    newRecipe.append('<p>' + hits.label + '</p>').append('<p><a>' + hits.url + '</a></p>').append(labels).append('<img src=' + hits.image + '>');
-
-    $('.recipes').append(newRecipe);
-
-  }
-
-})
+  })
 })

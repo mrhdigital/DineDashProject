@@ -157,3 +157,6 @@ input, .input {
 #cuisine-input {
     display: none;
 }
+ul {
+    display: inline-block;
+}
