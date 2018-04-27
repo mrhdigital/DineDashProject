@@ -51,7 +51,7 @@ $('.btn-search').on('click', function () {
 
       //appending all list items onto the list
       var newRecipe = $('<li id="recipe-' + i + '">');
-      newRecipe.append('<p>' + hits.label + '</p>').append('<p><a>' + hits.url + '</a></p>').append(labels).append('<img src=' + hits.image + '>');
+      newRecipe.append('<p>' + hits.label + '</p>').append('<p><a href=' + hits.url + '>View Full Recipe</a></p>').append(labels).append('<img src=' + hits.image + '>');
       $('.recipes').append(newRecipe);
 
     }
