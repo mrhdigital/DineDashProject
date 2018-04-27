@@ -12,10 +12,10 @@
         crossorigin="anonymous"></script>
 
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
 
     <!-- Linking Styling Sheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -30,7 +30,9 @@
     <!-- Navbar goes here -->
     <nav>
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo"><img src="assets/images/nutrition-logo.png"></a>
+            <a href="index.html" class="brand-logo">
+                <img src="assets/images/nutrition-logo.png">
+            </a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
                     <a href="dine.html">Dine</a>
@@ -52,53 +54,50 @@
                 </div>
                 <div class="card-content white-text">
                     <p>Start adding your information to get started!</p>
-                    <form>
-                        <div class="row row-ingredient">
-                            <div class="input-field col s6">
-                                <input placeholder="Ingredient" id="ingredient-input" type="text" class="validate">
-                            </div>
+                    <div class="row row-input">
+                        <div class="input-field col s6">
+                            <input placeholder="Ingredient" id="ingredient-input" type="text" class="validate">
                         </div>
-                        <div class="row row-ingredient">
-                            <div class="input-field col s6">
-                                <input placeholder="Restriction" id="two-input" type="text" class="validate">
-                            </div>
-                        </div>
-                        <div class="row row-ingredient">
-                            <div class="input-field col s6">
-                                <input placeholder="Ingredient 3" id="three-input" type="text" class="validate">
-                            </div>
-                        </div>
-                        <div class="row row-ingredient">
-                            <div class="input-field col s6">
-                                <input placeholder="Ingredient 4" id="four-input" type="text" class="validate">
-                            </div>
-                        </div>
-                        <div class="row row-ingredient">
-                            <div class="input-field col s6">
-                                <input placeholder="Ingredient 5" id="five-input" type="text" class="validate">
-                            </div>
-                        </div>
-                        <div class="row row-ingredient">
-                            <div class="input-field col s6">
-                                <input placeholder="Ingredient 6" id="six-input" type="text" class="validate">
-                            </div>
-                        </div>
-                        <a class="waves-effect waves-light btn">button</a>
-                    </form>
+                    </div>
+                    <div class="input-field col s12">
+                        <select class="diet-restrictions">
+                            <option value="" disabled selected>Choose an options</option>
+                            <option value="1">Balanced</option>
+                            <option value="2">High-Protein</option>
+                            <option value="3">High-Fiber</option>
+                            <option value="4">Low-Fat</option>
+                            <option value="5">Low-Carb</option>
+                            <option value="6">Low-Sodium</option>
+                            <option value="7">Vegetarian</option>
+                            <option value="8">Vegan</option>
+                        </select>
+                        <label>Diet Specifications</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select class="health-restrictions">
+                            <option value="" disabled selected>Choose an options</option>
+                            <option value="1">Peanut-Free</option>
+                            <option value="2">Tree-Nut-Free</option>
+                            <option value="3">Soy-Free</option>
+                            <option value="4">Fish-Free</option>
+                            <option value="5">Shellfish-Free</option>
+                        </select>
+                        <label>Diet Specifications</label>
+                    </div>
+                    <a class="waves-effect waves-light btn">Submit</a>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="row row-information">
         <div class="col s10 recipes">
-            
+
         </div>
     </div>
 
     <!-- Linking Javascript -->
-    <script src="assets/javascript/script.js"></script>
-    <!-- <script src="assets/javascript/materialize.min.js"></script> -->
+    <script src="assets/javascript/ingredientSearch.js"></script>
 
 
 

@@ -30,6 +30,11 @@ body{
     width: auto;
 }
 
+.row-input {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
 .row-information {
     float: left;
 }
