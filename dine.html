@@ -23,24 +23,30 @@
     <!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 
+    <!-- Link Design Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 </head>
 
 <body>
 
     <!-- Navbar goes here -->
-    <nav>
-        <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo"                 <img src="assets/images/nutrition-logo.png"></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>
-                    <a class="navBtn" href="dine.html">Dine</a>
-                </li>
-                <li>
-                    <a class="navBtn" href="dash.html">Dash</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div class="col s12">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo" img src="assets/images/nutrition-logo.png"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="dine.html"><i class="material-icons">restaurant</i></a>
+                    </li>
+                    <li>
+                        <a href="dash.html"><i class="material-icons">time_to_leave</i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <!-- Page Layout here -->
     <div class="row row-information">
@@ -82,7 +88,7 @@
                         </select>
                         <label>Diet Specifications</label>
                     </div>
-                        <a class="waves-effect waves-light btn btn-search">Search</a>
+                    <a class="waves-effect waves-light btn btn-search">Search</a>
                     </form>
                 </div>
             </div>
@@ -92,20 +98,20 @@
     <div class="row row-information">
         <div class="col s10 recipes">
 
-    <div class="row row-information">
-        <div class="col s10 ">
-            <ul class="recipes">
-                
-            </ul>
-            
-        </div>
-    </div>
+            <div class="row row-information">
+                <div class="col s10 ">
+                    <ul class="recipes">
 
-    <!-- Linking Javascript -->
-    <script src="assets/javascript/ingredientSearch.js"></script>
-    <script src="assets/javascript/restaurantSearch.js"></script>
+                    </ul>
 
-    <!-- <script src="assets/javascript/materialize.min.js"></script> -->
+                </div>
+            </div>
+
+            <!-- Linking Javascript -->
+            <script src="assets/javascript/ingredientSearch.js"></script>
+            <script src="assets/javascript/restaurantSearch.js"></script>
+
+            <!-- <script src="assets/javascript/materialize.min.js"></script> -->
 
 
 

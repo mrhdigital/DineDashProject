@@ -18,42 +18,71 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
     <!-- Linking Styling Sheet -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/index-styles.css">
 
     <!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 
 </head>
 
-<body>
+<body class="welcome">
+    <span id="splash-overlay" class="splash"></span>
+    <span id="welcome" class="z-depth-4"></span>
 
-    <div>
-        <!-- Modal Trigger -->
-        <a class="waves-effect waves-light btn modal-trigger"></a>
-
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Welcome to Dine and Dash!</h4>
-
-                <br>
-                <hr>
-                <p>Would you like to "Dine" or "Dash" today?</p>
+    <header class="navbar-fixed">
+        <nav class="row deep-purple darken-3">
+            <div class="col s12">
+                <ul class="right">
+                    <li class="right">
+                        <a href="dine.html" class="fa fa-facebook-square fa-2x waves-effect waves-light">
+                            <span class="icon-text"></span>
+                        </a>
+                    </li>
+                    <li class="right">
+                        <a href="dash.html" target="_blank" class="fa fa-github-square fa-2x waves-effect waves-light">
+                            <span class="icon-text"></span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="modal-footer">
-                <a href="dine.html" class="modal-action modal-close waves-effect waves-green btn-flat" id="dineBtn">Dine</a>
-                <a href="dash.html" class="modal-action modal-close waves-effect waves-green btn-flat" id="dashBtn">Dash</a>
-                </div>
+        </nav>
+    </header>
+
+    <main class="valign-wrapper">
+        <span class="container grey-text text-lighten-1 ">
+
+            <p class="flow-text">Welcome to</p>
+            <h1 class="title grey-text text-lighten-3">Dine or Dash!</h1>
+
+            <blockquote class="flow-text">Would you like to "dine" or "dash" today?</blockquote>
+
+            <div class="center-align">
+                <!-- Button Trigger -->
+                <a class="btn dropdown-button" href="dine.html" data-activates="exams">Dine!
+                </a>
+                <!-- Button Trigger -->
+                <a class="btn dropdown-button" href="" data-activates="study">Dash!
+                </a>
+            </div>
+
+        </span>
+    </main>
+
+    <footer class="page-footer deep-purple darken-3">
+        <div class="footer-copyright deep-purple darken-4">
+            <div class="container">
+                <time datetime="{{ site.time | date: '%Y' }}">&copy; 2018 </time>
             </div>
         </div>
+    </footer>
 
 
     <!-- Linking Javascript -->
     <script src="assets/javascript/script.js"></script>
     <script src="assets/javascript/ingredientSearch.js"></script>
     <script src="assets/javascript/restaurantSearch.js"></script>
-    
-    <!-- <script src="assets/javascript/materialize.min.js"></script> -->
+
+    <script src="assets/javascript/materialize.min.js"></script>
 
 
 
