@@ -10,7 +10,9 @@ body{
 main {
     flex: 1 0 auto;
   }
-
+  .input-field.col.s6{
+      width: 100%;
+  }
 .material-icons {
     color: #fff !important;
 }
