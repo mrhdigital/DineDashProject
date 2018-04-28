@@ -54,7 +54,14 @@ $('.btn-search').on('click', function () {
   });
   $.ajax({
     url: queryURL,
-    method: 'GET'
+    method: 'GET',
+    statusCode: {
+      401:function() { $('.recipes').text('NO RESULTS').attr('style', 'font-weight: 60px; font-weight: bold;') },
+      404:function() { $('.recipes').text('NO RESULTS').attr('style', 'font-weight: 60px; font-weight: bold;') },
+      200:function() { $('.recipes').text('NO RESULTS').attr('style', 'font-weight: 60px; font-weight: bold;') },
+      201:function() { $('.recipes').text('NO RESULTS').attr('style', 'font-weight: 60px; font-weight: bold;') },
+      202:function() { $('.recipes').text('NO RESULTS').attr('style', 'font-weight: 60px; font-weight: bold;') }
+    }
   }).then(function (response) {
 
     for (var i = 0; i < response.hits.length; i++) {
@@ -79,8 +86,6 @@ $('.btn-clear').on('click', function () {
   var ingredientInput = '';
   var dietInput = '';
   var healthInput = '';
-
-  $(".diet-restrictions:selected").removeAttr("selected");
 
   database.ref().set({
     ingredientTerms: ingredientInput,
