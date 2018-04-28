@@ -56,7 +56,6 @@ $('.btn-search').on('click', function () {
     url: queryURL,
     method: 'GET',
   }).then(function (response) {
-
     for (var i = 0; i < response.hits.length; i++) {
       var hits = response.hits[i].recipe
       var labels = $('<ul>');
