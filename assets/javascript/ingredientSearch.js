@@ -76,7 +76,7 @@ $('.btn-search').on('click', function () {
                   <p>${labels.html()}</p>
               </div>
               <div class="card-action">
-                  <a href="${hits.url}">Open</a>
+                  <a class="waves-effect waves-light btn btn-clear" href="${hits.url}">Open</a>
               </div>
           </div>
   `)
