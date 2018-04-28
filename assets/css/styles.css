@@ -28,7 +28,7 @@ main {
     padding: 5px !important;
 }
 
-ul {
+.recipes {
     columns: 3;
 }
 
