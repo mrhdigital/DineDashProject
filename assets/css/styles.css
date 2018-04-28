@@ -34,6 +34,21 @@ main {
     columns: 3;
 }
 
+@media only screen and (max-width: 1024px) {
+    .recipes {
+        columns: 2;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .recipes {
+        columns: 1;
+    }
+    .card {
+        text-align: center !important;
+    }
+}
+
 .row-input {
     margin-top: 0px !important;
     margin-bottom: 0px !important;

@@ -75,7 +75,7 @@ $('.btn-search').on('click', function () {
                   <p>${labels.html()}</p>
               </div>
               <div class="card-action">
-                  <a class="waves-effect waves-light btn" target="_blank" href="${hits.url}">Recipe</a>
+                  <a class="waves-effect waves-light btn" target="_blank id="recipeBtn" href="${hits.url}">Recipe</a>
               </div>
           </div>
   `)
