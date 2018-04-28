@@ -11,10 +11,6 @@ main {
     flex: 1 0 auto;
   }
 
-.nav-wrapper {
-    background-color: #cb202d;
-}
-
 .material-icons {
     color: #fff !important;
 }
@@ -23,20 +19,12 @@ main {
     text-align: center !important;
 }
 
+.brand-logo {
+    color: #fff !important;
+}
+
 .modal-footer {
     text-align: center !important;
-}
-
-#dineBtn {
-    background-color: #cb202d;
-    color: #fff;
-    margin-bottom: 40px !important;
-}
-
-#dashBtn {
-    background-color:#cb202d;
-    color: #fff;
-    margin-bottom: 40px !important;
 }
 
 .card-title {
