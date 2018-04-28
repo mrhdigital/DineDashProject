@@ -44,13 +44,13 @@ $('.btn-search').on('click', function () {
   database.ref().on('value', function (snapshot) {
     queryURL += ('&q=' + snapshot.val().ingredientTerms);
 
-    if(snapshot.val().dietTerms != 'Choose an option'){
-    queryURL += ('&diet=' + snapshot.val().dietTerms.trim().toLowerCase());
+    if (snapshot.val().dietTerms != 'Choose an option') {
+      queryURL += ('&diet=' + snapshot.val().dietTerms.trim().toLowerCase());
     }
-    if(snapshot.val().healthTerms != 'Choose an option'){
+    if (snapshot.val().healthTerms != 'Choose an option') {
       queryURL += ('&health=' + snapshot.val().healthTerms.trim().toLowerCase());
-      }
-    
+    }
+
   });
   $.ajax({
     url: queryURL,
@@ -66,7 +66,20 @@ $('.btn-search').on('click', function () {
       }
 
       var newRecipe = $('<li id="recipe-' + i + '">');
-      newRecipe.append('<p>' + hits.label + '</p>').append('<p><a>' + hits.url + '</a></p>').append(labels).append('<img src=' + hits.image + '>');
+      newRecipe.append(`
+          <div class="card">
+              <div class="card-image">
+                  <img id="cardImage" src="${hits.image}">
+                  <span class="card-title">${hits.label}</span>
+              </div>
+              <div class="card-content">
+                  <p>${labels.html()}</p>
+              </div>
+              <div class="card-action">
+                  <a href="${hits.url}">Open</a>
+              </div>
+          </div>
+  `)
 
       $('.recipes').append(newRecipe);
 

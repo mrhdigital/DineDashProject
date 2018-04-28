@@ -15,20 +15,20 @@ main {
     color: #fff !important;
 }
 
-.modal-content {
-    text-align: center !important;
-}
-
 .brand-logo {
     color: #fff !important;
 }
 
-.modal-footer {
-    text-align: center !important;
+.card {
+    display: inline-block;
 }
 
 .card-title {
     background-color:#cb202d;
+}
+
+ul {
+    columns: 3;
 }
 
 .row-input {
