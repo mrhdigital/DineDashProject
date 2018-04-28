@@ -54,7 +54,7 @@ $('.btn-search').on('click', function () {
   });
   $.ajax({
     url: queryURL,
-    method: 'GET'
+    method: 'GET',
   }).then(function (response) {
 
     for (var i = 0; i < response.hits.length; i++) {
@@ -92,8 +92,6 @@ $('.btn-clear').on('click', function () {
   var ingredientInput = '';
   var dietInput = '';
   var healthInput = '';
-
-  $(".diet-restrictions:selected").removeAttr("selected");
 
   database.ref().set({
     ingredientTerms: ingredientInput,
