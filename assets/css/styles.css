@@ -1,4 +1,4 @@
-body{
+body {
 	background: url("../images/background.jpg");
 	background-size: 100%;
     background-repeat: repeat;
@@ -9,10 +9,12 @@ body{
 
 main {
     flex: 1 0 auto;
-  }
-  .input-field.col.s6{
-      width: 100%;
-  }
+}
+
+.input-field.col.s6 {
+    width: 100%;
+}
+
 .material-icons {
     color: #fff !important;
 }
@@ -184,4 +186,10 @@ input, .input {
 
 ul {
     display: inline-block;
+}
+
+#dash-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
