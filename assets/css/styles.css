@@ -4,6 +4,14 @@ body{
     background-repeat: repeat;
 }
 
+.nav-wrapper {
+    background-color: #cb202d;
+}
+
+.navBtn {
+    color: #fff !important;
+}
+
 .modal-content {
     text-align: center !important;
 }
@@ -16,7 +24,6 @@ body{
     background-color: #cb202d;
     color: #fff;
     margin-bottom: 40px !important;
-
 }
 
 #dashBtn {
@@ -25,9 +32,8 @@ body{
     margin-bottom: 40px !important;
 }
 
-#sidebarImage {
-    max-height: 200px;
-    width: auto;
+.card-title {
+    background-color:#cb202d;
 }
 
 .row-input {

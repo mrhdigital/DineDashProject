@@ -24,7 +24,6 @@ $('.btn-search').on('click', function () {
   var ingredientInput = '';
   var dietInput = '';
   var healthInput = '';
-  console.log();
   //checking if input field has input
   if ($('#ingredient-input').val()) {
 
@@ -52,9 +51,7 @@ $('.btn-search').on('click', function () {
       queryURL += ('&health=' + snapshot.val().healthTerms.trim().toLowerCase());
       }
     
-    console.log(snapshot.val().ingredientTerms)
   });
-  console.log(queryURL)
   $.ajax({
     url: queryURL,
     method: 'GET'
@@ -71,7 +68,6 @@ $('.btn-search').on('click', function () {
       var newRecipe = $('<li id="recipe-' + i + '">');
       newRecipe.append('<p>' + hits.label + '</p>').append('<p><a>' + hits.url + '</a></p>').append(labels).append('<img src=' + hits.image + '>');
 
-
       $('.recipes').append(newRecipe);
 
     }
@@ -86,11 +82,10 @@ $('.btn-clear').on('click', function () {
 
   $(".diet-restrictions:selected").removeAttr("selected");
 
-
-
   database.ref().set({
     ingredientTerms: ingredientInput,
     dietTerms: dietInput,
     healthTerms: healthInput
+
   })
 })
