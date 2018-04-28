@@ -2,7 +2,14 @@ body{
 	background: url("../images/background.jpg");
 	background-size: 100%;
     background-repeat: repeat;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+
+main {
+    flex: 1 0 auto;
+  }
 
 .nav-wrapper {
     background-color: #cb202d;
