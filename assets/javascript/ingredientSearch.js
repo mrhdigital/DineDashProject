@@ -55,13 +55,6 @@ $('.btn-search').on('click', function () {
   $.ajax({
     url: queryURL,
     method: 'GET',
-    statusCode: {
-      401:function() { $('.recipes').text('NO RESULTS').attr('style', 'font-weight: 60px; font-weight: bold;') },
-      404:function() { $('.recipes').text('NO RESULTS').attr('style', 'font-weight: 60px; font-weight: bold;') },
-      200:function() { $('.recipes').text('NO RESULTS').attr('style', 'font-weight: 60px; font-weight: bold;') },
-      201:function() { $('.recipes').text('NO RESULTS').attr('style', 'font-weight: 60px; font-weight: bold;') },
-      202:function() { $('.recipes').text('NO RESULTS').attr('style', 'font-weight: 60px; font-weight: bold;') }
-    }
   }).then(function (response) {
 
     for (var i = 0; i < response.hits.length; i++) {
