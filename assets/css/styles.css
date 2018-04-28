@@ -25,6 +25,7 @@ main {
 
 .card-title {
     background-color:#cb202d;
+    padding: 5px !important;
 }
 
 ul {
@@ -163,6 +164,7 @@ input, .input {
 #cuisine-input {
     display: none;
 }
+
 ul {
     display: inline-block;
 }
