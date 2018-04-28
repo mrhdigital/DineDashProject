@@ -27,7 +27,7 @@ $('.btn-search').on('click', function () {
 
     //getting info from input field and adding to database
     var ingredientInput = $('#ingredient-input').val();
-    database.ref().set({ingredientTerms: ingredientInput})
+    database.ref().set({ ingredientTerms: ingredientInput })
 
   }
 
@@ -45,6 +45,8 @@ $('.btn-search').on('click', function () {
     for (var i = 0; i < response.hits.length; i++) {
       //set reference for recipe
       var hits = response.hits[i].recipe
+    }
+  })
 
   var searchInput = 'chicken';
   database.ref().set({
@@ -78,19 +80,18 @@ $('.btn-search').on('click', function () {
     }
 
 
-      //creating UL to attach ingredients to
-      var labels = $('<ul>');
+    //creating UL to attach ingredients to
+    var labels = $('<ul>');
 
-      // looping through ingredients on each recipe
-      for (var j = 0; j < hits.healthLabels.length; j++) {
-        labels.append('<li>' + hits.healthLabels[j] + '</li>');
-      }
-
-      //appending all list items onto the list
-      var newRecipe = $('<li id="recipe-' + i + '">');
-      newRecipe.append('<p>' + hits.label + '</p>').append('<p><a target="_blank" href=' + hits.url + '>View Full Recipe</a></p>').append(labels).append('<img src=' + hits.image + '>');
-      $('.recipes').append(newRecipe);
-
+    // looping through ingredients on each recipe
+    for (var j = 0; j < hits.healthLabels.length; j++) {
+      labels.append('<li>' + hits.healthLabels[j] + '</li>');
     }
+
+    //appending all list items onto the list
+    var newRecipe = $('<li id="recipe-' + i + '">');
+    newRecipe.append('<p>' + hits.label + '</p>').append('<p><a target="_blank" href=' + hits.url + '>View Full Recipe</a></p>').append(labels).append('<img src=' + hits.image + '>');
+    $('.recipes').append(newRecipe);
+
   })
 })
