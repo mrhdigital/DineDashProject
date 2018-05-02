@@ -20,6 +20,7 @@ var database = firebase.database();
 
 //setting click event to search button
 $('.btn-search').on('click', function () {
+  
   var queryURL = 'https://api.edamam.com/search?app_id=64622731&app_key=720fb1becfca77bf78494a9ce7272cc6';
   var ingredientInput = '';
   var dietInput = '';
@@ -108,7 +109,7 @@ $('.btn-search').on('click', function () {
                   <p>${labels.html()}</p>
               </div>
               <div class="card-action">
-                  <a class="waves-effect waves-light btn" target="_blank id="recipeBtn" href="${hits.url}">Recipe</a>
+                  <a class="waves-effect waves-light btn" target="_blank" href="${hits.url}">Recipe</a>
               </div>
           </div>
   `)
@@ -125,6 +126,8 @@ $('.btn-clear').on('click', function () {
   var dietInput = '';
   var healthInput = '';
   
+
+  $('#ingredient-input').val('');
 
   database.ref().set({
     ingredientTerms: ingredientInput,
