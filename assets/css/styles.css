@@ -68,6 +68,9 @@ a:link, a:visited {
     color: #fff;
     text-decoration: none;
 }
+#Rlink {
+    color:#cb202d;
+}
 
 a:hover {
     color: #D94148;

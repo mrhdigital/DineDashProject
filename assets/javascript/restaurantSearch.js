@@ -249,35 +249,33 @@ $(document).ready(function () {
 
                     for (let i = 0; i < data.restaurants.length; i++) {
 
-                        var anchor = $("<a>");
-                        var mainDiv = $("<div>");
-                        var p = $("<p>");
+                        
                         var priceRange = data.restaurants[i].restaurant.price_range;
                         var span = $("<span>");
-                        var subDiv1 = $("<div>");
-                        var subDiv2 = $("<div>");
-                        var subDiv3 = $("<div>");
-
-                        subDiv1.append(data.restaurants[i].restaurant.name);
-                        subDiv1.addClass("venueName");
-                        subDiv2.append(data.restaurants[i].restaurant.location.city);
-                        subDiv2.addClass("venueCity");
-                        subDiv3.append(data.restaurants[i].restaurant.location.address + "<hr>");
-                        p.append("Cuisines: " + data.restaurants[i].restaurant.cuisines + "<br>");
+                       // var p = $("<p>");
                         for (var cost = 0; cost < priceRange; cost++) {
-                            span.append("$");
-                        }
-                        p.append("Cost: ", span);
-                        anchor.attr("href", data.restaurants[i].restaurant.url);
-                        anchor.attr("target", "_blank");
-                        anchor.text("Visit Zomato Restaurant Page");
-                        p.append("<br>");
-                        p.append(anchor);
-                        subDiv3.append(p);
-                        mainDiv.append(subDiv1);
-                        mainDiv.append(subDiv2);
-                        mainDiv.append(subDiv3);
-                        mainDiv.addClass("venues");
+                                 span.append("$");
+                             }
+                        // p.append("Cost: ", span);
+                        var mainDiv = $("<div>");
+                         mainDiv.append(`
+                         <div class="venues">
+                             <div class="venueName">${data.restaurants[i].restaurant.name}</div>
+                             <div class="venueCity">${data.restaurants[i].restaurant.location.city}</div>
+                             <div>
+                                 ${data.restaurants[i].restaurant.location.address}
+                                 <hr>
+                                 <p>
+                                     Cuisines: ${data.restaurants[i].restaurant.cuisines}
+                                     
+                                     <br>Cost: ${span.html()}
+                                     
+                                     <br>
+                                     <a id="Rlink" href="${data.restaurants[i].restaurant.url}" target ="_ blank">Visit Zomato Restaurant Page</a>
+                                 </p>
+                             </div>
+                         </div>
+                         `) 
 
                         $("#hits").append(mainDiv);
 
