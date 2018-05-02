@@ -46,9 +46,6 @@ main {
     .recipes {
         columns: 1;
     }
-    .card {
-        text-align: center !important;
-    }
 }
 
 .row-input {

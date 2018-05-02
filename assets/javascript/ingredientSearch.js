@@ -98,7 +98,7 @@ $('.btn-search').on('click', function () {
         labels.append('<li>' + hits.healthLabels[j] + '</li>');
       }
 
-      var newRecipe = $('<li id="recipe-' + i + '">');
+      var newRecipe = $('<div id="recipe-' + i + '">');
       newRecipe.append(`
           <div class="card">
               <div class="card-image">
