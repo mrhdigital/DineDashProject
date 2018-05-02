@@ -15,10 +15,15 @@
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="assets/css/materialize.min.css">
-  
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
   <!-- Compiled and minified JavaScript -->
   <script src="assets/js/materialize.min.js"></script>
-  
+
+  <!-- Spinner Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+
   <!-- link to sytlesheets-->
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
@@ -59,8 +64,9 @@
         <select id="cuisine-input" class="input">
           <option value="null" selected disabled>Choose a cuisine...</option>
         </select>
-        <button type="submit" class="api-call">Submit</button>
+        <button type="submit" class="api-call">Search</button>
         <button type="submit" id="resetButton">Reset</button>
+        <div class="loadSpinner"></div>
       </form>
     </div>
     <div class="resultsWrapper">
@@ -76,9 +82,6 @@
       </div>
     </div>
   </footer>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
 
   <!-- linked to javascript file-->
   <script type="text/javascript" src="assets/javascript/restaurantSearch.js"></script>
