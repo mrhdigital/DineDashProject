@@ -56,6 +56,10 @@ main {
     margin-bottom: 0px !important;
 }
 
+#recipeBtn {
+    color: #fff;
+}
+
 .row-information {
     float: left;
 }
