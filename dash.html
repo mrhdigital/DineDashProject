@@ -18,6 +18,9 @@
   
   <!-- Compiled and minified JavaScript -->
   <script src="assets/js/materialize.min.js"></script>
+
+    <!-- Spinner Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
   
   <!-- link to sytlesheets-->
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -59,8 +62,9 @@
         <select id="cuisine-input" class="input">
           <option value="null" selected disabled>Choose a cuisine...</option>
         </select>
-        <button type="submit" class="api-call">Submit</button>
+        <button type="submit" class="api-call">Search</button>
         <button type="submit" id="resetButton">Reset</button>
+        <div class="loadSpinner"></div>
       </form>
     </div>
     <div class="resultsWrapper">
