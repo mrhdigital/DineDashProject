@@ -19,7 +19,7 @@ body {
   
   body.welcome {
     background: url("../images/background.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: repeat;
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
