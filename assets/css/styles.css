@@ -5,6 +5,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    height: 100%
 }
 
 main {
@@ -20,7 +21,7 @@ main {
 }
 
 .brand-logo {
-    color: #fff !important;
+    color: #fff !important; 
 }
 
 .card {
@@ -71,15 +72,6 @@ a:link, a:visited {
 
 a:hover {
     color: #D94148;
-}
-
-header {
-    background: #cb202d;
-    color: white;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
-    padding: 5px 15px;
-    text-align: center;
 }
 
 input, .input {
@@ -190,10 +182,4 @@ input, .input {
 
 ul {
     display: inline-block;
-}
-
-#dash-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
