@@ -184,3 +184,9 @@ input, .input {
 ul {
     display: inline-block;
 }
+
+#dash-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
