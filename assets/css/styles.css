@@ -7,6 +7,11 @@ body {
     flex-direction: column;
     height: 100%
 }
+.brand-logo  {
+    height: 50px;
+    margin: 10px;
+    
+}
 
 main {
     flex: 1 0 auto;
