@@ -1,6 +1,6 @@
 Title: Ecco Nutrition
 
-Members: Eric Baltutis, Gavin Peterson, Mirza Mameed
+Members: Eric Baltutis, Gavin Peterson, Mirza Hameed
 
 Project Description:
 
